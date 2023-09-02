@@ -22,6 +22,18 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 ![DeepinScreenshot_select-area_20230902225654](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/065e32fb-c979-4e2c-a4d5-3b2eb21d68ee)
 
 
+# Kurulum 
+Githubdan dosyaları klonluyoruz 
+``` git clone https://github.com/Cyber-byteX/End-ARCH/ ``` 
+Dosyanın içine giriyoruz
+``` cd End-ARCH/ ``` 
+Kurulum
+``` bash kurulum.sh ``` 
+Ve açalım
+``` sudo python3 EndArch.py ``` 
+👏 👏 👏 Bitti.
+
+
 DAHA FAZLA BİLGİ İÇİN BİZE ULAŞIN.
 
  DİSCORD : https://discord.gg/z9yQfFXk
