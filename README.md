@@ -21,7 +21,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 
 ![DeepinScreenshot_select-area_20230902225618](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/4f085c15-ca6b-4053-8aba-57fcc40611d8)
 
-![DeepinScreenshot_select-area_20230902233739](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/d86ddbeb-1b4f-485b-9a6b-5dabe17b2c0a)
+![DeepinScreenshot_select-area_20230902235012](https://github.com/scriptkidsensei/End-ARCH/assets/55909183/f8087de7-9513-4ce6-94c6-4023d9c338d0)
 
 
 
