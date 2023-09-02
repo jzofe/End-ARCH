@@ -25,12 +25,19 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 # Kurulum 
 Githubdan dosyaları klonluyoruz 
 ``` git clone https://github.com/Cyber-byteX/End-ARCH/ ``` 
+
 Dosyanın içine giriyoruz
+
 ``` cd End-ARCH/ ``` 
+
 Kurulum
+
 ``` bash kurulum.sh ``` 
+
 Ve açalım
+
 ``` sudo python3 EndArch.py ``` 
+
 👏 👏 👏 Bitti.
 
 
