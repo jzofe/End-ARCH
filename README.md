@@ -26,7 +26,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 
 
 
-# İndirme
+# İndirme işlemi
 
 Githubdan dosyaları klonluyoruz 
 ``` 
@@ -54,7 +54,7 @@ Ve açalım
 👏 👏 👏 
 
 
-# End Arch'ı Silme
+# Silme işlemi
 
 ```
 chmod +x sil.sh
