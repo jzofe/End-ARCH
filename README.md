@@ -51,7 +51,7 @@ Ve açalım
  sudo python3 EndArch.py
 ```
 
-👏 👏 👏 Bitti.
+👏 👏 👏 
 
 
 # End Arch'ı Silme
@@ -69,7 +69,9 @@ chmod +x sil.sh
 DAHA FAZLA BİLGİ İÇİN BİZE ULAŞIN.
 
  DİSCORD : https://discord.gg/z9yQfFXk
+ 
  PATREON : https://www.patreon.com/EnderProject
+ 
  WEBSITESİ : https://endertopluluk.com
 
 
