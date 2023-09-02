@@ -14,7 +14,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 - Arch Linux Sorunlarını giderme 
 - L4 / L7 DdoS script
 - Otomatik openVPN bağlantısı kurma
-- Arch iyileştirme araçları
+- Arch iyileştirme araçları ve ekstra araçlar
 - Cloudflare-Bypass
 
 
