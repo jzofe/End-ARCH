@@ -15,6 +15,8 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 - Otomatik openVPN bağlantısı kurma
 - Arch iyileştirme aracları
 
+
+
 # UYGULAMA İÇİ GÖRÜNTÜLER
 
 ![DeepinScreenshot_select-area_20230902225618](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/4f085c15-ca6b-4053-8aba-57fcc40611d8)
@@ -22,24 +24,47 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 ![DeepinScreenshot_select-area_20230902225654](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/065e32fb-c979-4e2c-a4d5-3b2eb21d68ee)
 
 
-# Kurulum 
+
+
+# İndirme
+
 Githubdan dosyaları klonluyoruz 
-``` git clone https://github.com/Cyber-byteX/End-ARCH/ ``` 
+``` 
+git clone https://github.com/Cyber-byteX/End-ARCH/
+ ``` 
 
 Dosyanın içine giriyoruz
 
-``` cd End-ARCH/ ``` 
+```
+cd End-ARCH/
+``` 
 
 Kurulum
 
-``` bash kurulum.sh ``` 
+``` 
+bash kurulum.sh
+``` 
 
 Ve açalım
 
-``` sudo python3 EndArch.py ``` 
+```
+ sudo python3 EndArch.py
+```
 
 👏 👏 👏 Bitti.
 
+
+# End Arch'ı Silme
+
+```
+chmod +x sil.sh
+```
+
+```
+./sil.sh
+```
+
+    
 
 DAHA FAZLA BİLGİ İÇİN BİZE ULAŞIN.
 
