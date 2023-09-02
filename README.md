@@ -16,7 +16,9 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 - Arch iyileştirme aracları
 
 # UYGULAMA İÇİ GÖRÜNTÜLER
+-Ana menü
 ![DeepinScreenshot_select-area_20230902225618](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/4f085c15-ca6b-4053-8aba-57fcc40611d8)
+-End Traffic Viewer
 ![DeepinScreenshot_select-area_20230902225654](https://github.com/Cyber-byteX/End-ARCH/assets/55909183/065e32fb-c979-4e2c-a4d5-3b2eb21d68ee)
 
 
