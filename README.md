@@ -15,7 +15,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 - L4 / L7 DdoS script
 - Otomatik openVPN bağlantısı kurma
 - Arch iyileştirme araçları ve ekstra araçlar
-- Cloudflare-Bypass
+- CloudFlare BYPASS
 
 
 
