@@ -66,8 +66,8 @@ def bekleme_animasyon(message):
         sys.stdout.flush()
 
 
-def check_module_installed(module_name):
-    result = run_command(f"pacman -Q {module_name}")
+def modul_kontrol(module_ismi):
+    result = run_command(f"pacman -Q {module_ismi}")
     if result.returncode == 0:
         print(f"Modüller indiriliyor... Lütfen bekleyiniz")
         time.sleep(1)
@@ -85,8 +85,8 @@ def main():
         print(f"{Fore.RED}[!]{Style.RESET}Bu scripti sadece root olarak çalıştırabilirsiniz. | End Arch")
         return
 
-    module_name = "macchanger"
-    check_module_installed(module_name)
+    module_ismi = "macchanger"
+    modul_kontrol(module_ismi)
     clear_screen()
 
     while True:
@@ -113,7 +113,6 @@ def main():
         class Renkler:
            MAVI = '\033[94m'
            YESIL = '\033[92m'
-           SIYAH = '\033[0m'
 
         seçenek = input(f"Lütfen bir seçenek seçin {Renkler.YESIL}[-] ")
 
@@ -163,12 +162,12 @@ def main():
                     input(Fore.RED + "[!]" + Style.RESET_ALL + " Geçersiz seçenek. Devam etmek için Enter'a basın.")
         elif seçenek == '2':
             while True:
-                print_header()
                 clear_screen()
+                print_header()
                 print(
-                    f"{Fore.LIGHTBLACK_EX}              Toollar | EndArch{Style.RESET_ALL}")
+                    f"                     TOOLLAR | EndArch")
                 print(f"{Fore.CYAN}#{Style.RESET_ALL}")
-                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}1{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Mac Adresimi Değiştir         {Fore.YELLOW}[{Style.RESET_ALL}{Fore.YELLOW}8{Style.RESET_ALL}{Fore.YELLOW}]{Style.RESET_ALL}{Fore.YELLOW} End Botnet")
+                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}1{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Mac Adresimi Değiştir         {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}8{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} End Botnet")
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}2{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} EndMacchanger (Loop)          {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}9{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Metasploit+Msfconsole (Otomatik kurulum)")
                 print(
@@ -181,7 +180,7 @@ def main():
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}6{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Blackarch (Otomatik kurulum)")
 
                 print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}7{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} BeefHack")
-                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}0{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Geri dön                      {Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}12{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
+                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}0{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Geri dön                      {Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}12{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
 
                 sub_seçenek = input(" Lütfen bir seçenek seçin : ")
 
@@ -207,7 +206,7 @@ def main():
                     sure = int(input(
                         f"{Fore.GREEN}  Kaç saniye içinde tekrar mac adresinizin değiştirilmesini istiyorsunuz? (örn. 150):{Style.RESET_ALL} "))
                     print(
-                         Fore.GREEN + "[+]" + Style.RESET_ALL + " EndMacchanger çalışıyor. MAC adresiniz her {sure} saniyede bir değiştirilecek.{Style.RESET_ALL}")
+                         Fore.GREEN + "[+]" + Style.RESET_ALL + f" EndMacchanger çalışıyor. MAC adresiniz her {sure} saniyede bir değiştirilecek.")
                     run_command_silent(
                         f"sudo watch -n {sure} macchanger -r {arayuz}")
                     time.sleep(5)
@@ -271,6 +270,7 @@ def main():
                                 print(Fore.RED + "[!]" + Style.RESET_ALL + " Hata mesajı:")
                                 print(error_output.strip())
                 elif sub_seçenek == '0':
+                    clear_screen()
                     break
                 else:
                     input(Fore.RED + "[!]" + Style.RESET_ALL + " Geçersiz seçenek. Devam etmek için Enter'a basın.")
