@@ -9,7 +9,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 
 - Macchanger + Otomatik MAC adresi değiştirici
 - HWID spoofer
-- TrafficViewer
+- Ağ Trafiği görüntüleyici
 - Blackarch + Metasploit + beEF gibi hacking araçlarını otomatik indirme 
 - Arch Linux Sorunlarını giderme 
 - L4 / L7 DdoS 
