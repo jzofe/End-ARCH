@@ -49,6 +49,21 @@ def print_header():
     """
     print(Fore.GREEN + header + Style.RESET_ALL)
 
+def print_header2():
+    header = r"""
+    ▓█████  ███▄    █ ▓█████▄     ▄▄▄       ██▀███   ▄████▄   ██░ ██
+    ▓█   ▀  ██ ▀█   █ ▒██▀ ██▌   ▒████▄    ▓██ ▒ ██▒▒██▀ ▀█  ▓██░ ██▒
+    ▒███   ▓██  ▀█ ██▒░██   █▌   ▒██  ▀█▄  ▓██ ░▄█ ▒▒▓█    ▄ ▒██▀▀██░
+    ▒▓█  ▄ ▓██▒  ▐▌██▒░▓█▄   ▌   ░██▄▄▄▄██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒░▓█ ░██
+    ░▒████▒▒██░   ▓██░░▒████▓     ▓█   ▓██▒░██▓ ▒██▒▒ ▓███▀ ░░▓█▒░██▓
+    ░░ ▒░ ░░ ▒░   ▒ ▒  ▒▒▓  ▒     ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ░▒ ▒  ░ ▒ ░░▒░▒
+      ░ ░  ░░ ░░   ░ ▒░ ░ ▒  ▒      ▒   ▒▒ ░  ░▒ ░ ▒░  ░  ▒    ▒ ░▒░ ░
+        ░      ░   ░ ░  ░ ░  ░      ░   ▒     ░░   ░ ░         ░  ░░ ░
+        ░  ░         ░    ░             ░  ░   ░     ░ ░       ░  ░  ░
+                       ░                            ░
+    """
+    print(Fore.CYAN + header + Style.RESET_ALL)
+
 
 def run_as_root(command):
     try:
@@ -163,7 +178,7 @@ def main():
         elif seçenek == '2':
             while True:
                 clear_screen()
-                print_header()
+                print_header2()
                 print(
                     f"                     TOOLLAR | EndArch")
                 print(f"{Fore.CYAN}#{Style.RESET_ALL}")
