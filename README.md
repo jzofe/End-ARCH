@@ -4,12 +4,14 @@
 
 English translation : [README_EN.md](https://github.com/scriptkidsensei/End-ARCH/blob/main/EndArchEng/README_EN.md)
 
-Supported Languages: Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
+Coded By Fyks
+Translated by Lorel
 
-如果需要，可以添加中文。
+## Supported Languages: Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
+Not: 如果需要，可以添加中文。
+READ!!!: Maybe not all languages are available on github. If you cant find your language:  Go to the site(https://endetopluluk.com) > Anasayfa > Projeler > find end arch tools > click to your language and install.
 
-KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VEREBİLİRSİNİZ.
-
+KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VERİNİZ.
 
 Lisans : [MIT LICENSE](https://github.com/scriptkidsensei/End-ARCH/blob/main/LICENSE)
 
@@ -41,7 +43,7 @@ Lisans : [MIT LICENSE](https://github.com/scriptkidsensei/End-ARCH/blob/main/LIC
 
 Githubdan dosyaları klonluyoruz 
 ``` 
-git clone https://github.com/scriptkidsensei/End-ARCH
+git clone https://github.com/Cyber-byteX/End-ARCH/
  ``` 
 
 Dosyanın içine giriyoruz
