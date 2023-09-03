@@ -27,6 +27,7 @@ Lisans : [MIT](https://github.com/scriptkidsensei/End-ARCH/blob/main/LICENSE)
 
 ![DeepinScreenshot_select-area_20230902235012](https://github.com/scriptkidsensei/End-ARCH/assets/55909183/382aa659-cb3a-4145-92e5-597834dc240c)
 
+![DeepinScreenshot_select-area_20230903105033](https://github.com/scriptkidsensei/End-ARCH/assets/55909183/0d681e2d-e071-4455-8deb-bf5e3e0fbf08)
 
 
 
