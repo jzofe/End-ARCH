@@ -12,7 +12,7 @@ KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇB
 - TrafficViewer
 - Blackarch + Metasploit + beEF gibi hacking araçlarını otomatik indirme 
 - Arch Linux Sorunlarını giderme 
-- L4 / L7 DdoS script
+- L4 / L7 DdoS 
 - Otomatik openVPN bağlantısı kurma
 - Arch iyileştirme araçları ve ekstra araçlar
 - CloudFlare BYPASS
