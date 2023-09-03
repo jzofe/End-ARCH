@@ -70,13 +70,13 @@ chmod +x sil.sh
 # Güncellemeler
 
 
-[3.9.2023 Pazar]
+ [3.9.2023 Pazar]
 
-[+] Buglar düzeltildi.
+> [+] Buglar düzeltildi.
 
-[2.9.2023 Cumartesi]
+ [2.9.2023 Cumartesi]
 
-EndArch githuba yüklendi.
+> EndArch githuba yüklendi.
 
 
 DAHA FAZLA BİLGİ İÇİN BİZE ULAŞIN.
