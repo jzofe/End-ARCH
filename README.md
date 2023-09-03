@@ -2,7 +2,7 @@
 
 # Modern Arch Linux HACK tools
 
-English Version : [End-ARCH-ENG](https://github.com/scriptkidsensei/End-ARCH/blob/main/EndArchEng/README_EN.md)
+English Version : [README.md](https://github.com/scriptkidsensei/End-ARCH/blob/main/EndArchEng/README_EN.md)
 
 KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VEREBİLİRSİNİZ.
 
