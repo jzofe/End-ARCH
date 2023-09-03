@@ -4,7 +4,7 @@
 
 English translation : [README_EN.md](https://github.com/scriptkidsensei/End-ARCH/blob/main/EndArchEng/README_EN.md)
 
-Supported Languages Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
+Supported Languages: Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
 
 如果需要，可以添加中文。
 
