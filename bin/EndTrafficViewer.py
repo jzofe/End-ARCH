@@ -5,10 +5,10 @@ import sys, os
 
 sys.stdout = sys.stderr = open('/dev/tty', 'w')
 
-YESIL = Fore.GREEN
-MAVI = Fore.BLUE
-KIRMIZI = Fore.RED
-BEYAZ = Fore.WHITE
+GREEN = Fore.GREEN
+BLUE = Fore.BLUE
+RED = Fore.RED
+WHITE = Fore.WHITE
 RESET = Style.RESET_ALL
 
 # Bu tool Endertopluluğa özel yapılmıştır
@@ -33,7 +33,7 @@ try:
         dest_mac = eth[0]
         src_mac = eth[1]
 
-        print(f"{YESIL}> Hedef MAC adresi: {RESET} {BEYAZ} {dest_mac.hex()}{RESET}  {YESIL} | > Kaynak MAC adresi: {RESET} {BEYAZ} {src_mac.hex()}{RESET} {RESET} |{KIRMIZI} Ağ birimi : {agbirimi}{RESET}")
+        print(f"{GREEN}> Hedef MAC adresi: {RESET} {WHITE} {dest_mac.hex()}{RESET}  {GREEN} | > Kaynak MAC adresi: {RESET} {WHITE} {src_mac.hex()}{RESET} {RESET} |{RED} Ağ birimi : {agbirimi}{RESET}")
 
 except OSError as e:
-    print(f"{KIRMIZI}Hata: {e}{RESET}")
+    print(f"{RED}Hata: {e}{RESET}")
