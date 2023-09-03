@@ -1,8 +1,12 @@
-# 🌌 End ARCH-BETA
+# 🌌 End ARCH Tools BETA
 
 # Modern Arch Linux HACK tools
 
 English translation : [README_EN.md](https://github.com/scriptkidsensei/End-ARCH/blob/main/EndArchEng/README_EN.md)
+
+Supported Languages Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
+
+如果需要，可以添加中文。
 
 KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VEREBİLİRSİNİZ.
 
