@@ -1,4 +1,4 @@
-# 🌌 End ARCH
+# 🌌 End ARCH-BETA
 
 # Modern Arch Linux HACK tools
 
