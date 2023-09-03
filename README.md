@@ -5,7 +5,7 @@
 
 KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR, ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VEREBİLİRSİNİZ.
 
-Lisans : [MIT LICENSE]([https://pages.github.com/](https://github.com/scriptkidsensei/End-ARCH/blob/main/LICENSE]).
+Lisans : [MIT LICENSE]([j](https://github.com/scriptkidsensei/End-ARCH/blob/main/LICENSE]).
 
 # 📡  İçerik
 
