@@ -1,8 +1,9 @@
-
 import os
 import subprocess
 import time
+import sys
 from colorama import Fore, Style, init
+
 # CODER FYKS
 
 # BU PROGRAM TAMAMEN ENDER TOPLULUK İÇİN YAPILMIŞTIR. ÜCRETSİZ VE OPEN-SOURCE DAĞITILMIŞTIR
@@ -57,24 +58,31 @@ def run_as_root(command):
     except subprocess.CalledProcessError:
         return False
 
+def bekleme_animasyon(message):
+    animation = "|/-\\"
+    for i in range(20):
+        time.sleep(0.2)
+        sys.stdout.write("\r" + message + animation[i % len(animation)])
+        sys.stdout.flush()
+
 
 def check_module_installed(module_name):
     result = run_command(f"pacman -Q {module_name}")
     if result.returncode == 0:
         print(f"Modüller indiriliyor... Lütfen bekleyiniz")
         time.sleep(1)
-        print(f"Modüller zaten indirilmiş. Yönlendiriliyorsunuz")
+        print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Modüller zaten indirilmiş. Yönlendiriliyorsunuz")
         time.sleep(2)
     else:
         print(f"Modüller indiriliyor... Lütfen bekleyiniz")
         time.sleep(2)
-        print(f"Modüller başarıyla indirildi. Yönlendiriliyorsunuz")
+        print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Modüller başarıyla indirildi. Yönlendiriliyorsunuz")
         time.sleep(3)
 
 
 def main():
     if os.geteuid() != 0:
-        print("Bu scripti sadece root olarak çalıştırabilirsiniz. | End Arch")
+        print(f"{Fore.RED}[!]{Style.RESET}Bu scripti sadece root olarak çalıştırabilirsiniz. | End Arch")
         return
 
     module_name = "macchanger"
@@ -102,80 +110,84 @@ def main():
             f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}6{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Arch Sorun giderici")
         print(
             f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}7{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
+        class Renkler:
+           MAVI = '\033[94m'
+           YESIL = '\033[92m'
+           SIYAH = '\033[0m'
 
-        choice = input("Lütfen bir seçenek seçin : ")
+        seçenek = input(f"Lütfen bir seçenek seçin {Renkler.YESIL}[-] ")
 
-        if choice == '1':
+        if seçenek == '1':
+            bekleme_animasyon("Sistem Güncelleştirmesi başlatılıyor ")
             result = run_command_silent("sudo pacman -Syu --noconfirm")
             if result == 0:
                 print("Sistem güncellendi.")
             else:
-                print("Sistem güncelleme sırasında bir hata oluştu.")
-        elif choice == '4':
+                clear_screen()
+                print(Fore.RED + "[!]" + Style.RESET_ALL + " Sistem güncelleme sırasında bir hata oluştu.")
+        elif seçenek == '4':
             while True:
                 clear_screen()
                 print(
-                    f"{Fore.LIGHTBLACK_EX}              Arch Bilgi ve Destek | EndArch{Style.RESET_ALL}")
-                print("Hoş geldiniz Arch kullanıcıları! End Arch, Arch Linux işletim sistemi için geliştirilmiş açık kaynak ve ücretsiz bir Ender topluluk projesidir.")
-                print("End Arch, aşağıdaki özellikleri sunar:")
-                print(
-                    "- Sisteminizi güncelleyebilir ve temel işlemleri gerçekleştirebilirsiniz.")
-                print(
-                    "- Arch sorun giderici aracımızı kullanarak işletim sisteminizdeki sorunları çözebilirsiniz.")
-                print(
-                    "- Mac adresinizi değiştirebilir, EndMacchanger ile otomatik olarak güncelleyebilirsiniz.")
-                print(
-                    "- Otomatik openVPN hizmeti ile güvenli bir şekilde internete bağlanabilirsiniz.")
-                print(
-                    "- Ağınızdaki gelen ve giden paketleri incelemek için EndTrafficViewer kullanabilirsiniz.")
-                print(
-                    "- Donanım kimliğinizi gizlemek için HWID spoofing yapabilirsiniz.")
-                print("- BlackArch toolarını otomatik olarak kurabilirsiniz.")
-                print("- BeefHack ile güvenlik testleri yapabilirsiniz.")
-                print(
-                    "End Arch'i kullanarak, Arch Linux işletim sisteminizi daha güvenli ve işlevsel hale getirebilirsiniz.")
+                    f"              Bilgi | EndArch")
+                print("EndArch içinde bulunan Araçların anlamları :")
+                print("")
+
+                print("|Macchanger       | MAC adresinizi değiştirir")
+                print("|EndMacchanger    | MAC adresinizi belirli zamanlar içerisinde sürekli olarak değiştirir")
+                print("|HWID spoofer     | Donanım kimliği numarasını sahteler(Spoof)")
+                print("|EndTrafficViewer | Ağınızdan gelen ve giden paketlerin bilgilerini gösterir")
+                print("|DdoS/DdoS Script | DDoS saldırısı bir hizmetin ağ trafiğinin yoğun bir şekilde artırılması yoluyla aşırı yüklenmesi sonucu erişilemez hale getirebilir")
+                print("|CloudFlare-Bypass| CloudFlare korumasını atlatarak (bypass) host'un gerçek IP adresini bulmaya yarar")
+                print("")
+                print("|BlacAarch        | BlackArch, çok büyük miktarda siber güvenlik aracı sağlayan Arch linux tabanlı bir penetrasyon testi dağıtımı. EndArch aracı BlackArch toollarını otomatik olarak kurar")
+                print("|Metasploit       | Metasploit, bilgisayar sistemlerinin ve ağların güvenlik açıklarını test etmek, sızma testleri yapmak için kullanılan bir açık kaynaklı siber güvenlik aracıdır.")
+                print("|beEF             | beEF,kullanıcıların web tarayıcıları üzerinde güvenlik açıklarını tespit etmek ve farkındalık yaratmak amacıyla tasarlanmıştır.")
+                print("|Arch sorun çözme | Bu araç Arch Linux kurulu bilgisayarlarda olası işletim sistemi sorunlarını çözmek için kullanabilirsiniz.")
+                print("")
                 print(
                     f"{Fore.BLUE}Discord : https://discord.gg/z9yQfFXk {Style.RESET_ALL}")
                 print(
                     f"{Fore.BLUE}Patreon : https://www.patreon.com/EnderProject {Style.RESET_ALL}")
-                print(">>Coder Fyks<<")
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}1{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Devam et")
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}2{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Geri dön")
-                sub_choice = input("Lütfen bir seçenek seçin : ")
-                if sub_choice == '1':
+                sub_seçenek = input("Lütfen bir seçenek seçin : ")
+                if sub_seçenek == '1':
                     break
-                elif sub_choice == '2':
+                elif sub_seçenek == '2':
                     clear_screen()
                     break
                 else:
-                    input("Geçersiz seçenek. Devam etmek için Enter'a basın.")
-        elif choice == '2':
+                    input(Fore.RED + "[!]" + Style.RESET_ALL + " Geçersiz seçenek. Devam etmek için Enter'a basın.")
+        elif seçenek == '2':
             while True:
                 print_header()
                 clear_screen()
                 print(
                     f"{Fore.LIGHTBLACK_EX}              Toollar | EndArch{Style.RESET_ALL}")
                 print(f"{Fore.CYAN}#{Style.RESET_ALL}")
-                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}1{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Mac Adresimi Değiştir                   {Fore.YELLOW}[{Style.RESET_ALL}{Fore.YELLOW}8{Style.RESET_ALL}{Fore.YELLOW}]{Style.RESET_ALL}{Fore.YELLOW} End Botnet")
+                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}1{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Mac Adresimi Değiştir         {Fore.YELLOW}[{Style.RESET_ALL}{Fore.YELLOW}8{Style.RESET_ALL}{Fore.YELLOW}]{Style.RESET_ALL}{Fore.YELLOW} End Botnet")
                 print(
-                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}2{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} EndMacchanger (Loop)                   {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}9{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Metasploit+Msfconsole (Otomatik kurulum)") 
+                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}2{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} EndMacchanger (Loop)          {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}9{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Metasploit+Msfconsole (Otomatik kurulum)")
                 print(
-                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}3{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} VPN            {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}10{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} End Cloudflare Bypass")
+                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}3{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} VPN                           {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}10{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} End Cloudflare Bypass")
                 print(
-                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}4{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} EndTrafficViewer")
+                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}4{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} EndTrafficViewer              {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}11{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} End DdoS script")
                 print(
-                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}5{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} HWID spoofer                   {Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}11{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} End DdoS script")
+                    f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}5{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} HWID spoofer")
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}6{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Blackarch (Otomatik kurulum)")
 
-                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}7{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} BeefHack                   {Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}12{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
+                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}7{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} BeefHack")
+                print(f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}0{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Geri dön                      {Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}12{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
 
-                sub_choice = input(" Lütfen bir seçenek seçin : ")
+                sub_seçenek = input(" Lütfen bir seçenek seçin : ")
 
-                if sub_choice == '1':
-                    print("Macchanger scripti çalıştırılıyor...")
+
+                if sub_seçenek == '1':
+                    bekleme_animasyon("Macchanger scripti çalıştırılıyor...")
                     time.sleep(3)
                     clear_screen()
                     interface = input(
@@ -183,11 +195,11 @@ def main():
                     result = run_command_silent(
                         f"sudo macchanger -R {interface}")
                     if "New MAC" in result.stdout:
-                        print("Mac adresiniz değiştirildi.")
+                        print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Mac adresiniz değiştirildi.")
                     else:
-                        print("Mac adresiniz değiştirilemedi.")
-                elif sub_choice == '2':
-                    print("EndMacchanger scripti çalıştırılıyor... ")
+                        print(Fore.RED + "[!]" + Style.RESET_ALL + " Mac adresiniz değiştirilemedi.")
+                elif sub_seçenek == '2':
+                    bekleme_animasyon("EndMacchanger scripti çalıştırılıyor... ")
                     time.sleep(3)
                     clear_screen()
                     arayuz = input(
@@ -195,17 +207,18 @@ def main():
                     sure = int(input(
                         f"{Fore.GREEN}  Kaç saniye içinde tekrar mac adresinizin değiştirilmesini istiyorsunuz? (örn. 150):{Style.RESET_ALL} "))
                     print(
-                        f"{Fore.RED}EndMacchanger çalışıyor. MAC adresiniz her {sure} saniyede bir değiştirilecek.{Style.RESET_ALL}")
+                         Fore.GREEN + "[+]" + Style.RESET_ALL + " EndMacchanger çalışıyor. MAC adresiniz her {sure} saniyede bir değiştirilecek.{Style.RESET_ALL}")
                     run_command_silent(
                         f"sudo watch -n {sure} macchanger -r {arayuz}")
                     time.sleep(5)
-                    print(f"{Fore.RED}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
+                    print(f"{Fore.GREEN}[+]{Style.RESET}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
                     time.sleep(sure)
-                    print(f"{Fore.RED}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
-                elif sub_choice == '6':
+                    print(f"{Fore.GREEN}[+]{Style.RESET}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
+                elif sub_seçenek == '10':
+                        run_command_silent("xdg-open https://endertopluluk.com")
+                elif sub_seçenek == '6':
                     clear_screen()
-                    print(
-                        "BlackArch toolarını kuruluyor... Bu işlem biraz zaman alabilir. ")
+                    bekleme_animasyon("BlackArch toolarını kuruluyor... Bu işlem biraz zaman alabilir ")
                     run_command("curl -O https://blackarch.org/strap.sh")
                     run_command(
                         "echo 5ea40d49ecd14c2e024deecf90605426db97ea0c strap.sh | sha1sum -c")
@@ -213,33 +226,32 @@ def main():
                     run_command("sudo ./strap.sh")
                     run_command("sudo pacman -Syu --noconfirm")
                     print(
-                        "BlackArch tooları başarıyla kuruldu ! Toolları görüntülemek için, 'sudo pacman -S blackarch'")
+                          Fore.GREEN + "[+]" + Style.RESET_ALL + " BlackArch tooları başarıyla kuruldu ! Toolları görüntülemek için, 'sudo pacman -S blackarch'")
                     time.sleep(10)
                     clear_screen()
-                elif sub_choice == '8':
-                    print("End Botnet ağına sahip olmak istiyorsanız websitemizden bize ulaşıp ücretli bir şekilde temin edebilirsiniz, https://endertopluluk.com ")
+                elif sub_seçenek == '8':
+                    print("discord.gg/")
 
-                elif sub_choice == '9':
-                    print("Otomatik Metasploit kurulumu başladı... Bu işlem zaman alabilir")
+                elif sub_seçenek == '9':
+                    bekleme_animasyon("Otomatik Metasploit kurulumu başladı... Bu işlem zaman alabilir")
                     time.sleep(2)
                     run_command_silent("sudo pacman -S metasploit --noconfirm ")
                     run_command_silent("")
                     time.sleep(1)
-                    print("Metasploit kurulumu tamamlandı!")
+                    print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Metasploit kurulumu tamamlandı!")
 
                     input("Ana menüye dönmek için Enter'a basın...")
-                elif sub_choice == '7':
-                    print("beEF toolu indirme işlemi başladı...")
+                elif sub_seçenek == '7':
+                    bekleme_animasyon("beEF toolu indirme işlemi başladı... Kurulum bittiğinde menüye yönlendirileceksiniz ")
                     time.sleep(1)
                     run_command_silent("git clone https://github.com/beefproject/beef")
-                    run_command_silent("cd beef & sudo ./install")
+                    run_command_silent("cd beef && sudo ./install")
+                    run_command_silent("bundle install")
                     run_command_silent("cd ..")
-                    print("beEF toolu kurulumu ve indirme işlemi tamamlandı. Tool, beef klasörüne gidip ./beef yazarsanız çalışacaktır.")
-                
-
-                elif sub_choice == '4':
+                    print(Fore.GREEN + "[+]" + Style.RESET_ALL + " beEF toolu kurulumu ve indirme işlemi tamamlandı. Tool, beef klasörüne girip ./beef yazarsanız çalışacaktır.")
+                elif sub_seçenek == '4':
                         clear_screen()
-                        print("EndTrafficViewer başlatılıyor...")
+                        bekleme_animasyon("EndTrafficViewer başlatılıyor...")
                         time.sleep(2)
                         clear_screen()
                         betik_yolu = os.path.expanduser("/home/fyks/Desktop/EndArch/bin/EndTrafficViewer.py")
@@ -256,14 +268,13 @@ def main():
                             if error_output == '' and process.poll() is not None:
                                 break
                             if error_output:
-                                print("Hata mesajı:")
+                                print(Fore.RED + "[!]" + Style.RESET_ALL + " Hata mesajı:")
                                 print(error_output.strip())
-                                
-
-              
-
-           
-        elif choice == '6':
+                elif sub_seçenek == '0':
+                    break
+                else:
+                    input(Fore.RED + "[!]" + Style.RESET_ALL + " Geçersiz seçenek. Devam etmek için Enter'a basın.")
+        elif seçenek == '6':
             while True:
                 print_header()
                 clear_screen()
@@ -284,9 +295,9 @@ def main():
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}6{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Diğer sorunlar")
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.RED}7{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} Geri dön")
-                sub_choice = input("Lütfen bir seçenek seçin : ")
+                sub_seçenek = input("Lütfen bir seçenek seçin : ")
 
-            if sub_choice == '1':
+            if sub_seçenek == '1':
                 clear_screen()
                 ekranadi = input(
                     "Çözünürlük sorunu yaşadığınız ekranın adını giriniz (örn. VGA-1): ")
@@ -302,38 +313,39 @@ def main():
                         f"xrandr --addmode {ekranadi} {cozunurluk}")
                     run_command_silent(
                         f"xrandr --output {ekranadi} --mode '{cozunurluk}' ")
-                    print("Çözünürlük uygulandı.")
+                    print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Çözünürlük uygulandı.")
                 else:
-                    print("Çözünürlük uygulanamadı.")
-            elif sub_choice == '2':
+                    print(Fore.RED + "[!]" + Style.RESET_ALL + "Çözünürlük uygulanamadı.")
+            elif sub_seçenek == '2':
                 clear_screen()
-                print("Bluetooth sorunları çözülüyor... ")
+                bekleme_animasyon("Bluetooth sorunları çözülüyor... ")
                 run_command("systemctl enable bluetooth.service")
                 run_command("systemctl start bluetooth.service")
                 print(f"Bluetooth sorunları çözüldü.")
-            elif sub_choice == '4':
+            elif sub_seçenek == '4':
                 clear_screen()
-                print("Wine ile ilgili sorunlar çözülüyor...")
+                bekleme_animasyon("Wine ile ilgili sorunlar çözülüyor...")
                 time.sleep(2)
                 run_command_silent("sudo pacman -R wine")
                 run_command_silent("sudo pacman -S wine")
                 run_command_silent("ulimit -s unlimited")
                 print(
-                    f"Başarılı. Hâlâ sorunlar çözülmediyse Wine'yi root olarak çalıştırmayı deneyebiliriz")
+                      Fore.GREEN + "[+]" + Style.RESET_ALL + " Başarılı. Hâlâ sorunlar çözülmediyse Wine'yi root olarak çalıştırmayı deneyebiliriz")
                 wine = input(
                     f"{Fore.GREEN}Çalıştırmak istediğiniz programın adını girin :{Style.RESET_ALL}")
                 run_command_silent(f"sudo wine {wine} ")
-            elif sub_choice == '5':
+            elif sub_seçenek == '5':
+                bekleme_animasyon(Fore.GREEN + "[+]" + Style.RESET_ALL + " Önerilen pacman paketleri kuruluyor")
                 run_command(
                     "sudo pacman -Syu --needed --noconfirm $(pacman -Qq | grep -v \"$(pacman -Qqe)\")")
-            elif sub_choice == '6':
+            elif sub_seçenek == '6':
                 print("Diğer sorunların çözümü için : https://discord.gg/z9yQfFXk")
-            elif sub_choice == '7':
+            elif sub_seçenek == '7':
                 clear_screen()
                 break
             else:
-                input("Geçersiz seçenek. Devam etmek için Enter'a basın.")
-        elif choice == '3':
+                input(Fore.RED + "[!]" + Style.RESET_ALL + "Geçersiz seçenek. Devam etmek için Enter'a basın.")
+        elif seçenek == '3':
             while True:
                 print_header()
                 clear_screen()
@@ -348,8 +360,8 @@ def main():
                 print(
                     f"{Fore.BLUE}[{Style.RESET_ALL}{Fore.GREEN}8{Style.RESET_ALL}{Fore.BLUE}]{Style.RESET_ALL} >>EnderTopluluk Web sitesi<<")
 
-                sub_choice = input("Lütfen bir seçenek seçin : ")
-                if sub_choice == '2':
+                sub_seçenek = input("Lütfen bir seçenek seçin : ")
+                if sub_seçenek == '2':
                     clear_screen()
                     print(
                         f"Bu seçenek istediğiniz bir uygulamayı bir çok packet managerde arayarak indirecektir.")
@@ -361,27 +373,27 @@ def main():
                     run_command_silent(
                         "git clone https://aur.archlinux.org/{packetx}.git")
                     print(
-                        "{packetx} uygulamasını Pacman, pamac, yay ve aur üzerinden indirmeyi denedik. Kurulup kurulmadığına bakabilirsiniz.")
-                elif sub_choice == '1':
+                        "{packetx} uygulamasının Pacman, pamac, yay ve aur üzerinden indirme işlemleri bitti. Kurulup kurulmadığına bakabilirsiniz.")
+                elif sub_seçenek == '1':
                     clear_screen()
-                    print("Timeshift yedekleme ve geri yükleme aracı kuruluyor... ")
+                    bekleme_animasyon("Timeshift yedekleme ve geri yükleme aracı kuruluyor... ")
                     run_command("sudo pacman -S timeshift")
-                    print("Timeshift başarıyla kuruldu.")
-                elif sub_choice == '8':
+                    print(Fore.GREEN + "[+]" + Style.RESET_ALL + " Timeshift başarıyla kuruldu.")
+                elif sub_seçenek == '8':
                     break
                 else:
-                    input("Geçersiz seçenek. Devam etmek için Enter'a basın.")
-        elif choice == '5':
+                    input(Fore.RED + "[!]" + Style.RESET_ALL + "Geçersiz seçenek. Devam etmek için Enter'a basın.")
+        elif seçenek == '5':
             clear_screen()
-            print("EndArch'tan çıkılıyor... İyi günler dileriz!")
+            print(Fore.GREEN + "[+]" + Style.RESET_ALL + " EndArch'tan çıkılıyor... İyi günler dileriz!")
             break
-        elif choice == '7':
+        elif seçenek == '7':
             clear_screen()
             print("Ender Topluluk Web Sitesine yönlendiriliyorsunuz... ")
             time.sleep(3)
             os.system("xdg-open https://endertopluluk.com")
         else:
-            input("Geçersiz seçenek. Devam etmek için Enter'a basın.")
+            input(Fore.RED + "[!]" + Style.RESET_ALL + " Geçersiz seçenek. Devam etmek için Enter'a basın.")
 
 if __name__ == "__main__":
     main()
