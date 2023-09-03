@@ -1,3 +1,4 @@
+#Bu scripti "sudo ./kurulum.sh" ile çalıştırabilirsiniz
 sudo pacman -S python-colorama --noconfirm
 chmod +x EndArch.py
 cd /bin/ 
