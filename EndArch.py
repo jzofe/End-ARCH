@@ -82,7 +82,7 @@ def modul_kontrol(module_ismi):
 
 def main():
     if os.geteuid() != 0:
-        print(f"{Fore.RED}[!]{Style.RESET}Bu scripti sadece root olarak çalıştırabilirsiniz. | End Arch")
+        print(Fore.RED + "[!]" + Style.RESET_ALL + " Bu scripti sadece root olarak çalıştırabilirsiniz. | End Arch")
         return
 
     module_ismi = "macchanger"
@@ -213,8 +213,30 @@ def main():
                     print(f"{Fore.GREEN}[+]{Style.RESET}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
                     time.sleep(sure)
                     print(f"{Fore.GREEN}[+]{Style.RESET}MAC adresiniz değiştirildi.{Style.RESET_ALL}")
+                elif sub_seçenek == '12':
+                    run_command_silent("xdg-open https://endertopluluk.com")
                 elif sub_seçenek == '10':
-                        run_command_silent("xdg-open https://endertopluluk.com")
+                    clear_screen()
+                    bekleme_animasyon("CloudflareBypass başlatılıyor... ")
+                    time.sleep(2)
+                    clear_screen()
+                    current_user = getpass.getuser()
+                    betik_yolu2 = os.path.expanduser(f"/home/{current_user}/Desktop/EndArch/bin/CloudflareBypass.sh")
+                    process = subprocess.Popen(['sudo', 'bash', betik_yolu2], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                    while True:
+                        output = process.stdout.readline()
+                        if output == '' and process.poll() is not None:
+                            break
+                        if output:
+                            print(output.strip())
+
+                    while True:
+                        error_output = process.stderr.readline()
+                        if error_output == '' and process.poll() is not None:
+                            break
+                        if error_output:
+                            print(Fore.RED + "[!]" + Style.RESET_ALL + " Hata mesajı:")
+                            print(error_output.strip())
                 elif sub_seçenek == '6':
                     clear_screen()
                     bekleme_animasyon("BlackArch toolarını kuruluyor... Bu işlem biraz zaman alabilir ")
@@ -253,7 +275,8 @@ def main():
                         bekleme_animasyon("EndTrafficViewer başlatılıyor...")
                         time.sleep(2)
                         clear_screen()
-                        betik_yolu = os.path.expanduser("/home/fyks/Desktop/EndArch/bin/EndTrafficViewer.py")
+                        current_user = getpass.getuser()
+                        betik_yolu = os.path.expanduser(f"/home/{current_user}/Desktop/EndArch/bin/EndTrafficViewer.py")
                         process = subprocess.Popen(['sudo', 'python', betik_yolu], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                         while True:
                             output = process.stdout.readline()
