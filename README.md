@@ -71,18 +71,22 @@ chmod +x sil.sh
 
 
 [3.9.2023 Pazar]
+
 [+] Buglar düzeltildi.
 
 [2.9.2023 Cumartesi]
+
 EndArch githuba yüklendi.
 
+
 DAHA FAZLA BİLGİ İÇİN BİZE ULAŞIN.
+
 
  DİSCORD : https://discord.gg/z9yQfFXk
  
  PATREON : https://www.patreon.com/EnderProject
  
- WEBSITESİ : https://endertopluluk.com
+ WEBSITE : https://endertopluluk.com
 
 
 
