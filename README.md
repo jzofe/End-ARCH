@@ -1,6 +1,6 @@
 # 🌌 End ARCH
 
-# Modern Arch Linux tools
+# Modern Arch Linux HACK tools
 
 
 KODLARIN DEĞİŞTİRİLİP GITHUB BENZERİ PLATFORMLARDA DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR, ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VEREBİLİRSİNİZ.
