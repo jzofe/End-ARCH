@@ -1,4 +1,5 @@
-#Bu scripti "sudo ./kurulum.sh" ile çalıştırabilirsiniz
+#!/bin/bash
+
 echo Kurulum başladı
 sudo pacman -S python3 
 
