@@ -41,7 +41,7 @@ Lisans : [MIT LICENSE](https://github.com/scriptkidsensei/End-ARCH/blob/main/LIC
 
 Githubdan dosyaları klonluyoruz 
 ``` 
-git clone https://github.com/Cyber-byteX/End-ARCH/
+git clone https://github.com/scriptkidsensei/End-ARCH
  ``` 
 
 Dosyanın içine giriyoruz
