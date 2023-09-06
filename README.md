@@ -13,7 +13,7 @@ Not: 如果需要，可以添加中文。
 
 READ!!!: Maybe not all languages are available on github. If you cant find your language: 
 
-Go to the [site](https://endetopluluk.com) > Anasayfa > Projeler > find end arch tools > click to your language and install.
+Go to the [site](https://endetopluluk.com) > Anasayfa > Projeler > Project Portal(its english) > click to End Arch Tools > Find your language
 
 # KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VERİNİZ.
 
