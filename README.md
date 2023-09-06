@@ -7,7 +7,7 @@ English translation : [README_EN.md](https://github.com/scriptkidsensei/End-ARCH
 Coded By Fyks
 | Translated by Lorel
 
-# Supported Languages: Türkçe(Orginal Language), हिंदी (Latin / traditional) , Deutsch ,  日本語 , Français, English.
+** Supported Languages: Türkçe, हिंदी, Deutsch ,  日本 , Français, English.
 
 Not: 如果需要，可以添加中文。
 
