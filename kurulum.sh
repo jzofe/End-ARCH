@@ -13,5 +13,7 @@ chmod 777 *
 
 cd ..
 
+c 
+
 clear
 echo Kurulum tamamlandı. "sudo python3 EndArch.py" komudu ile scripti çalıştırabilirsiniz.
