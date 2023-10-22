@@ -274,3 +274,6 @@ def main():
             sys.exit(0)
         else:
             print(Fore.RED + "[-]" + Style.RESET_ALL + " Invalid selection. Please try again.")
+
+if __name__ == "__main__":
+   main()
