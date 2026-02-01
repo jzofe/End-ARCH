@@ -15,7 +15,6 @@ READ!!!: Maybe not all languages are available on github. If you cant find your 
 
 Go to the [site](https://endetopluluk.com) > Anasayfa > Projeler > Project Portal(its english) > click to End Arch Tools > Find your language
 
-# KODLARIN DEĞİŞTİRİLİP DAĞITILMASINDA HİÇBİR SAKINCA YOKTUR. ENDER TOPLULUĞUN GELİŞMESİNDE BÜYÜK KATKITA BULUNMAK İÇİN CREDIT VERİNİZ.
 
 Lisans : [MIT LICENSE](https://github.com/scriptkidsensei/End-ARCH/blob/main/LICENSE)
 
